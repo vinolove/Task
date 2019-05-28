@@ -78,7 +78,7 @@ export class Dashboard extends Component {
         const value = e.target.value;
         const { userList } = this.state;
         const list = userList.filter(user=>{
-            return user.username.toLowerCase().startsWith(value)
+            return user.username.toLowerCase().startsWith(value.toLowerCase())
         })
         this.setState({
             listToDisplay: list,
